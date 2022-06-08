@@ -42,7 +42,7 @@ packer.init {
 return packer.startup(function(use)
   -- Base plugins
   use 'wbthomason/packer.nvim'          -- Have packer manage itself
-  use "nvim-lua/plenary.nvim"           -- Useful lua functions used ny lots of plugins
+  use 'nvim-lua/plenary.nvim'           -- Useful lua functions used ny lots of plugins
   use 'numToStr/Comment.nvim'           -- For comments
 
 	-- Colorschemes
@@ -77,8 +77,8 @@ return packer.startup(function(use)
 
   -- Treesitter
   use {
-     "nvim-treesitter/nvim-treesitter",
-     run = ":TSUpdate",
+     'nvim-treesitter/nvim-treesitter',
+     run = ':TSUpdate',
   }
   use 'p00f/nvim-ts-rainbow'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
