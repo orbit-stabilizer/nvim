@@ -31,6 +31,7 @@ keymap('n', '<leader>e', ':NvimTreeToggle<cr>', opts)
 keymap('n', '<leader>vs', ':vsplit<cr>', opts)
 keymap('n', '<leader>hs', ':split<cr>', opts)
 keymap('n', '<leader>bd', ':bd<cr>', opts)
+keymap('n', '<leader>wd', '<C-w>c<cr>', opts)
 
 -- Navigate buffers
 keymap('n', '<leader>bn', ':bnext<cr>', opts)
@@ -97,7 +98,7 @@ keymap('n', '<leader>py', '@y', opts)
 keymap('n', '<leader>pz', '@z', opts)
 
 -- Telescope
-keymap('n', '<leader>f', '<cmd>Telescope find_files<cr>', opts)
+keymap('n', '<leader><leader>', '<cmd>Telescope find_files<cr>', opts)
 --keymap('n', '<leader>f', '<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>', opts)
 keymap('n', '<leader>g', '<cmd>Telescope live_grep<cr>', opts)
 
