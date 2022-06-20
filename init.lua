@@ -12,3 +12,8 @@ require 'user.gitsigns'
 require 'user.nvim-tree'
 require 'user.feline'
 require 'user.toggleterm'
+
+-- Set Python indent to 2 spaces
+vim.cmd([[
+  let g:python_recommended_style = 0
+]], false)

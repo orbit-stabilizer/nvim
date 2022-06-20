@@ -7,6 +7,7 @@ comment.setup {
   pre_hook = function(ctx)
     local U = require 'Comment.utils'
 
+    -- This stuff can be removed perhaps
     local location = nil
     if ctx.ctype == U.ctype.block then
       location = require('ts_context_commentstring.utils').get_cursor_location()

@@ -55,6 +55,7 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-cmdline'             -- Command line completion
   use 'saadparwaiz1/cmp_luasnip'        -- Snippet completion
   use 'hrsh7th/cmp-nvim-lsp'            -- LSP snippets
+  -- use {'neoclide/coc.nvim', branch = 'release'}
 
   -- File exploration
 	use 'kyazdani42/nvim-tree.lua' 	      -- nvim tree
