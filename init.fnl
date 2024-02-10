@@ -29,5 +29,9 @@
                }))
   }
   {
+    1 "neovim/nvim-lspconfig"
+    :config (lambda []
+              (let [lspconfig (require "lspconfig")]
+                (lspconfig.clangd.setup {})))
   }
 ])
