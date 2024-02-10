@@ -1,4 +1,4 @@
-(lambda set-key! [mode new old]
+(fn set-key! [mode new old]
   (let [opts {:noremap true :silent true}]
     (vim.keymap.set mode new old opts)))
 

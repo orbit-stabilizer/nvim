@@ -4,14 +4,14 @@
   (vim.fn.system ["git" "clone" "--filter=blob:none" "https://github.com/folke/lazy.nvim.git" "--branch=stable" lazypath])) (vim.opt.rtp.prepend vim.opt.rtp lazypath)
 
 ;; Run commands
-(lambda run-cmd! [option value]
+(fn run-cmd! [option value]
   ((. vim.cmd option) value))
 
 ((. (require :lazy) :setup)
  [
   {
     1 "catppuccin/nvim"
-    :config (lambda [] 
+    :config (fn [] 
               ((. (require "catppuccin") :setup)
                {
                 :transparent_background true
@@ -20,7 +20,7 @@
   }
   {
     1 "nvim-treesitter/nvim-treesitter"
-    :config (lambda []
+    :config (fn []
               ((. (require "nvim-treesitter.configs") :setup)
                {
                 :ensure_installed ["c" "lua" "vim" "vimdoc" "fennel"]
@@ -30,7 +30,7 @@
   }
   {
     1 "neovim/nvim-lspconfig"
-    :config (lambda []
+    :config (fn []
               (let [lspconfig (require "lspconfig")]
                 (lspconfig.clangd.setup {})))
   }

@@ -1,4 +1,4 @@
-(lambda set-opt! [option value]
+(fn set-opt! [option value]
   (tset vim.opt option value))
 
 (set-opt! :number true)
